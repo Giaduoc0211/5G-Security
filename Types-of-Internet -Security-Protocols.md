@@ -22,4 +22,12 @@ Vậy để hiểu rõ hơn TLS là gì chúng ta sẽ lấy ví dụ thực t�
   - Nếu không có TLS bạn sẽ không biết được bạn có đang giao tiếp với một trang web hợp pháp hay không. Vì hiện nay các trang web bị giả mạo rất nhiều chúng lừa người dùng truy cập vào trang web giả mạo đó và yêu cầu các thông tin nhạy cảm từ người dùng từ đó chúng sẽ dùng thông tin đánh cắp được để đăng nhập vào trang web hợp pháp.
   - Nếu không có TLS thì dữ liệu trên đường truyền có thể bị đánh cắp và sửa đổi dẫn đến nạn nhân nhận được những thông tin sai lệch
 ### TLS hoạt động như thế nào
+TLS bao gốm 2 giai đoạn:
+- Giai đoạn 1: Handshake phase
+- Giai đoạn 2: Encryption phase
+- <p align="center">
+  <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/8a03bc88-abc0-4a96-8227-4cb962cacbc8" alt="">
+</p>
+#### Handshake phase
+
 
