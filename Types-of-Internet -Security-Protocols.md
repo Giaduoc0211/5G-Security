@@ -1,4 +1,4 @@
-# Types of Internet Security Protocols
+![image](https://github.com/Giaduoc0211/5G-Security/assets/71538455/35603557-d67e-4f33-ab4d-9563c67ec609)# Types of Internet Security Protocols
 ## Summary
 - [Overview](#Overview)
 - [TLS protocol](#TLSPotocol)
@@ -79,16 +79,26 @@ TLS bao gốm 2 giai đoạn:
         <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/a9b6f6c9-3590-4a3a-92c5-ead28928e484" alt="">
   </p>
 ### **1.2 TLS ảnh hưởng tới hiệu suất như nào**
-<p align="center">
-        <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/5489be60-2416-463f-865e-f8c1c0f37661" alt="">
-</p>
 - Hiện nay thì giao thức TLS 1.3 nó đã được hỗ trợ và nó giảm thiểu khá nhiều thời gian trong giai đoạn bắt tay. 
+  <p align="center">
+          <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/5489be60-2416-463f-865e-f8c1c0f37661" alt="">
+  </p>
+
 - Dưới đây là ảnh so sánh giữa TLS 1.2 và TLS 1.3
-<p align="center">
-        <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/2dc7f54c-e734-41a5-b909-33904e7c0c6f" alt="">
-</p>
-
-
+  <p align="center">
+          <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/2dc7f54c-e734-41a5-b909-33904e7c0c6f" alt="">
+  </p>
+- Khác với TLS 1.2 thì TLS 1.3 nó thực hiện việc trao đổi khóa trong 2 bước đầu tiên thay vì tới tận bước 6 như của TLS 1.2.
+- Phía client sẽ thực hiện liệt kê các giải thuật mã hóa mà phía bên server có thể lựa chọn để mã hóa và gửi nó tới cho server.
+- Vì đã được liệt kê sẵn nên Server sẽ chọn một giải thuật mã hóa trong đó để mã hóa và từ đó client và server đều có khóa chung. Để hiểu rõ hơn mình sẽ mô tả một ví dụ cụ thể dưới đây.
+  <p align="center">
+          <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/2cc2e7ad-e1e0-46be-bfc0-832824b0cd54" alt="">
+  </p>
+- Như hình trên chúng ta có thể thấy thay vì chỉ gửi tin nhắn hello thì client đã gửi luôn cả các thông tin mã hóa của nó tới cho servre( cụ thể là client sử dụng giao thức Diffie-Hellman). Phía server nhận được thông tin này thì server cũng sử dụng loại giao thức tương ứng kết hợp với public key và thông tin của client gửi tới và tạo ra được khóa chung giữa client và server luôn.
+  ## **2. HTTPS protocol**
+  HTTPS là giao thức mở rộng của HTTP và kết hợp lớp bảo mật. Khi một trình duyệt truy cập một trang web qua HTTPS, nó sẽ thiết lập một kết nối bảo mật sử dụng SSL/TLS để mã hóa dữ liệu được truyền tải giữa trình duyệt và máy chủ web.
+  ⇒ Vậy tức là việc bảo mật của HTTP giống với TLS ở phần 1 mà mình đã mô tả
+  
 
 
 
