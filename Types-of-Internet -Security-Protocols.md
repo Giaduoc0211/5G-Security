@@ -60,6 +60,32 @@ TLS bao gốm 2 giai đoạn:
      <p align="center">
       <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/689a1c9f-cb7a-4d96-8c44-21dc2f058314" alt="">
     </p>
+  - Sau khi xác thực chứng chỉ xong Client sẽ tạo ra một chuôi random và sử dụng public key của web server để mã hóa và gửi lại cho server
+   
+  - Server sử dụng khóa private để giải mã và lấy ra chuỗi random client gửi tới
+     <p align="center">
+      <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/fbbedebf-5887-4b8d-91d3-5471e2b6a3e8" alt="">
+    </p>
+  - Client và server sử dụng chuỗi random chung này để tạo ra khóa chung là session key
+    <p align="center">
+      <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/7d8d8038-c480-4c77-9a70-c1fe62b5eddd" alt="">
+    </p>
+#### **1.1.2 Encryption phase**
+- Sau giai đoạn bắt tay thì cả client và server đều có chung session key rồi
+- Vậy chúng ta đã đảm bảo được tính chất bảo mật đầu tiên là authentication vậy còn 2 tính chất bảo mật nữa là intergrity và encryption.
+- Ở giải đoạn 2 này TLS sử dụng thuật toán hash và mã hóa để đảm bảo 2 tính chất bảo mật ở trên
+- Cứ mỗi lần dữ liệu được gửi đi nó sẽ được mã hóa và được hash bằng khóa MAC bí mật. Sau khi server gửi dữ liệu và client nhận được để đảm bảo dữ liệu không bị thay đổi trên đường truyền client sẽ xác thực chữ ký MAC nếu đúng thì tức là dữ liệu không bị thay đổi
+  <p align="center">
+        <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/a9b6f6c9-3590-4a3a-92c5-ead28928e484" alt="">
+  </p>
+### **TLS ảnh hưởng tới hiệu suất như nào**
+<p align="center">
+        <img src="[https://github.com/Giaduoc0211/5G-Security/assets/71538455/a9b6f6c9-3590-4a3a-92c5-ead28928e484](https://github.com/Giaduoc0211/5G-Security/assets/71538455/f4e931c9-2ae1-42cf-a5bb-b64440f35fb8)" alt="">
+  </p>
+
+
+
+
 
 
 - 
