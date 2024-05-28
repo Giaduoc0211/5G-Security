@@ -50,10 +50,18 @@ TLS bao gốm 2 giai đoạn:
       <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/257fe9bc-8d13-4ebf-a7e3-1c61de791180" alt="">
     </p>
   
+- Mục đích thứ 2 của giai đoạn này là tạo được khóa chung giữa client và server được gọi là **symmetric key**. Khóa này sẽ được dùng ở giao đoạn thứ 2.
+- **Quá trình trao đổi tại giai đoạn 1 được thực hiện như sau:**
+  - Webserver sẽ gửi cho client một TLS certificate và một public
+     <p align="center">
+      <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/3f9b4a02-55ff-426e-8da3-ee4f40d3bb21" alt="">
+    </p>
+  -  Client xác thực TLS certificate mà server gửi tới. TLS certificate sẽ được xác minh bởi CA xem nó có bị chỉnh sửa hoặc thay đổi gì hay không
+     <p align="center">
+      <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/689a1c9f-cb7a-4d96-8c44-21dc2f058314" alt="">
+    </p>
 
 
-- Mục đích thứ 2 của giai đoạn này là tạo được khóa chung giữa client và server được gọi là **symmetric key**. Khóa này sẽ được dùng ở giao đoạn thứ 2
-- 
 - 
 
 
