@@ -10,4 +10,5 @@ Trong thế giới ngày nay, chúng ta truyền dữ liệu với số lượng
 - Data encryption
 - Authentication
 - Data intergrity
+
 ![image](https://github.com/Giaduoc0211/5G-Security/assets/71538455/6fbbadee-3e3d-406a-9355-11d13cd23c45)
