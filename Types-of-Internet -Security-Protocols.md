@@ -31,8 +31,23 @@ TLS bao gốm 2 giai đoạn:
 
 #### 1.1.1 Handshake phase 
 - Mục đích chính của giai đoạn bắt tay này là **Authentication** vì trước khi làm bất cứ điều gì thì client cần tin tưởng vào danh tính của máy chủ mà nó đang giao tiếp.
-- Vậy để tạo sự tin tưởng này máy chủ cần cung cấp một chứng chỉ TLS được cung cấp bởi bên thứ 3 và sau đó họ sử dụng phương thức khóa bất đối xứng để xác thực. Cùng phân tích cách hoạt động của nó ở dưới:
-    - 
-![image](https://github.com/Giaduoc0211/5G-Security/assets/71538455/7e5d94a1-308d-4968-991f-be711dac79b8)
+- Vậy để tạo sự tin tưởng này máy chủ cần cung cấp một chứng chỉ TLS được cung cấp bởi bên thứ 3 và sau đó họ sử dụng phương thức khóa bất đối xứng để xác thực. Vậy làm thế nào để web server có được TLS certificate này:
+  - **TLS certificate là một tệp dữ liệu chứa tên miền, cá nhân hoặc tổ chức sở hữu chứng chỉ, cơ quan cấp chứng chỉ, khóa chung của máy chủ và các dữ liệu khác**
+  - Để chứng chỉ TLS hợp lệ, nó cần phải được lấy từ certificate authority(CA).
+    - CA là một tổ chức bên ngoài, một bên thứ ba đáng tin cậy tạo và cấp chứng chỉ TLS (SSL).
+
+    - CA cũng sẽ ký điện tử vào chứng chỉ bằng khóa riêng của họ, cho phép các thiết bị khách xác minh nó.
+  
+    - Sau khi chứng chỉ được cấp, nó cần được cài đặt và kích hoạt trên máy chủ của trang web .
+  
+    - Dịch vụ lưu trữ web thường có thể xử lý việc này cho các nhà điều hành trang web.
+
+    - Sau khi được kích hoạt trên máy chủ, trang web sẽ có thể tải qua HTTPS và tất cả lưu lượng truy cập đến và đi từ trang web sẽ được mã hóa và bảo mật.
+
+Vì vậy, chứng chỉ TLS (SSL) là thứ cho phép các trang web chuyển từ  HTTP sang  HTTPS .
+- Mục đích thứ 2 của giai đoạn này là tạo được khóa chung giữa client và server được gọi là **symmetric key**. Khóa này sẽ được dùng ở giao đoạn thứ 2
+- 
+- 
+
 
 
