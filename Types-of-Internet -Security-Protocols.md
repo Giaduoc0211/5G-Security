@@ -78,16 +78,17 @@ TLS bao gốm 2 giai đoạn:
   <p align="center">
         <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/a9b6f6c9-3590-4a3a-92c5-ead28928e484" alt="">
   </p>
-### **TLS ảnh hưởng tới hiệu suất như nào**
+### **1.2 TLS ảnh hưởng tới hiệu suất như nào**
 <p align="center">
         <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/5489be60-2416-463f-865e-f8c1c0f37661" alt="">
 </p>
+- Hiện nay thì giao thức TLS 1.3 nó đã được hỗ trợ và nó giảm thiểu khá nhiều thời gian trong giai đoạn bắt tay. 
+- Dưới đây là ảnh so sánh giữa TLS 1.2 và TLS 1.3
+<p align="center">
+        <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/2dc7f54c-e734-41a5-b909-33904e7c0c6f" alt="">
+</p>
 
 
-
-
-
-- 
 
 
 
