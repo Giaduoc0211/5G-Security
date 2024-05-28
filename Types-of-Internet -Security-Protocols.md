@@ -46,7 +46,7 @@ TLS bao gốm 2 giai đoạn:
     - Dịch vụ lưu trữ web thường có thể xử lý việc này cho các nhà điều hành trang web.
 
     - Sau khi được kích hoạt trên máy chủ, trang web sẽ có thể tải qua HTTPS và tất cả lưu lượng truy cập đến và đi từ trang web sẽ được mã hóa và bảo mật.
-    <p align="center">
+<p align="center">
   <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/257fe9bc-8d13-4ebf-a7e3-1c61de791180" alt="">
 </p>
   
