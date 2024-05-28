@@ -12,5 +12,6 @@ Trong thế giới ngày nay, chúng ta truyền dữ liệu với số lượng
 - Data intergrity
 
 <p align="center">
-  <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/6fbbadee-3e3d-406a-9355-11d13cd23c45" alt="Descriptive Alt Text">
+  <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/6fbbadee-3e3d-406a-9355-11d13cd23c45" alt="Dữ liệu truyền đi cần đảm bảo 3 tính bảo mật trên CIA">
 </p>
+
