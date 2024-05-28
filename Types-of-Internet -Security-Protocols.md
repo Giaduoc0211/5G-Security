@@ -80,9 +80,8 @@ TLS bao gốm 2 giai đoạn:
   </p>
 ### **TLS ảnh hưởng tới hiệu suất như nào**
 <p align="center">
-        <img src="[https://github.com/Giaduoc0211/5G-Security/assets/71538455/a9b6f6c9-3590-4a3a-92c5-ead28928e484](https://github.com/Giaduoc0211/5G-Security/assets/71538455/f4e931c9-2ae1-42cf-a5bb-b64440f35fb8)" alt="">
-  </p>
-
+        <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/5489be60-2416-463f-865e-f8c1c0f37661" alt="">
+</p>
 
 
 
