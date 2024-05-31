@@ -1,11 +1,11 @@
 # Types of Internet Security Protocols
 ## Summary
 - [Overview](#Overview)
-- [TLS protocol](#1._TLS_Potocol)
+- [TLS protocol](#1.TLS_Potocol)
 - [HTTPS protocol ](#HTTPSprotocol)
 ## Overview
 Trong thế giới ngày nay, chúng ta truyền dữ liệu với số lượng lớn và tính bảo mật của dữ liệu này là rất quan trọng, vì vậy bảo mật Internet cung cấp tính năng đó, tức là bảo vệ dữ liệu. Có nhiều loại giao thức khác nhau tồn tại như định tuyến, chuyển thư và giao thức liên lạc từ xa
-## 1. **TLS Potocol**
+## 1.**TLS-Potocol**
 Ở đây mình sẽ không đề cập tới SSL nữa vì TLS chính là cải thiện tốt hơn của SSL. Vậy TLS là gì, TLS - transport layer secure nó được sinh ra để đảm bảo 3 tính chất bảo mật sau: 
 - Data encryption
 - Authentication
