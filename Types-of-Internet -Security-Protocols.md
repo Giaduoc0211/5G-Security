@@ -2,10 +2,10 @@
 ## Summary
 - [Overview](#Overview)
 - [TLS protocol](#TLSPotocol)
-- [Exploit to RCE ](#Exploit-to-RCE )
+- [HTTPS protocol ](#HTTPSprotocol)
 ## Overview
 Trong thế giới ngày nay, chúng ta truyền dữ liệu với số lượng lớn và tính bảo mật của dữ liệu này là rất quan trọng, vì vậy bảo mật Internet cung cấp tính năng đó, tức là bảo vệ dữ liệu. Có nhiều loại giao thức khác nhau tồn tại như định tuyến, chuyển thư và giao thức liên lạc từ xa
-## 1. TLS Potocol
+## 1. **TLS Potocol**
 Ở đây mình sẽ không đề cập tới SSL nữa vì TLS chính là cải thiện tốt hơn của SSL. Vậy TLS là gì, TLS - transport layer secure nó được sinh ra để đảm bảo 3 tính chất bảo mật sau: 
 - Data encryption
 - Authentication
@@ -95,9 +95,33 @@ TLS bao gốm 2 giai đoạn:
           <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/2cc2e7ad-e1e0-46be-bfc0-832824b0cd54" alt="">
   </p>
 - Như hình trên chúng ta có thể thấy thay vì chỉ gửi tin nhắn hello thì client đã gửi luôn cả các thông tin mã hóa của nó tới cho servre( cụ thể là client sử dụng giao thức Diffie-Hellman). Phía server nhận được thông tin này thì server cũng sử dụng loại giao thức tương ứng kết hợp với public key và thông tin của client gửi tới và tạo ra được khóa chung giữa client và server luôn.
-  ## **2. HTTPS protocol**
-  HTTPS là giao thức mở rộng của HTTP và kết hợp lớp bảo mật. Khi một trình duyệt truy cập một trang web qua HTTPS, nó sẽ thiết lập một kết nối bảo mật sử dụng SSL/TLS để mã hóa dữ liệu được truyền tải giữa trình duyệt và máy chủ web.
-  ⇒ Vậy tức là việc bảo mật của HTTP giống với TLS ở phần 1 mà mình đã mô tả
+## **2. HTTPS protocol**
+HTTPS là giao thức mở rộng của HTTP và kết hợp lớp bảo mật. Khi một trình duyệt truy cập một trang web qua HTTPS, nó sẽ thiết lập một kết nối bảo mật sử dụng SSL/TLS để mã hóa dữ liệu được truyền tải giữa trình duyệt và máy chủ web.
+⇒ Vậy tức là việc bảo mật của HTTP giống với TLS ở phần 1 mà mình đã mô tả
+## **3. IPSEC protocol**
+- IPsec- IP security là một giao thức được sử dụng để bảo mật dữ liệu khi truyền tải qua mạng internet đặc biệt là trong các kết nối VPN (Virtual Private Network).
+- Vậy VPN là gì?VPN - Virtual private network là một dịch vụ bảo mật Internet cho phép người dùng truy cập Internet như thể họ được kết nối với mạng riêng. VPN mã hóa
+  thông tin liên lạc trên Internet cũng như cung cấp mức độ ẩn danh cao.
+- IPsec hoạt động tại lớp 3 - lớp network của mô hình OSI. Mục đích của IPsec là:
+  - Cung cấp bảo mật bộ định tuyến khi gửi dữ liệu qua internet công cộng.
+  - Mã hóa dữ liệu ứng dụng.
+  - Xác thực dữ liệu nhanh chóng nếu dữ liệu bắt nguồn từ một người gửi đã biết.
+  - Bảo vệ dữ liệu mạng bằng cách thiết lập các mạch mã hóa, gọi là IPsec tunnel, mã hóa tất cả dữ liệu được gửi giữa hai điểm cuối.
+  - Các tổ chức sử dụng IPSec để bảo vệ chống lại các cuộc tấn công replay.
+  - Giao thức IPSec gán số thứ tự cho mỗi gói dữ liệu và thực hiện kiểm tra để phát hiện dấu hiệu của các gói trùng lặp
+- Các chế độ hoạt động của IPsec:Cả 2 chế độ này đều đảm bảo tính bảo mật toàn vẹn và replay tuy nhiên nó sẽ có mức độ bảo mật khác nhau và cách thức hoạt động khác nhau:
+  - Transport mode: Trong chế độ này, chỉ có dữ liệu người dùng được mã hóa và bảo vệ, IP Header không bị thay đổi hay mã hóa. Transport Mode được sử dụng cho các kết nối VPN client-to-site.
+  - Tunnel mode: Chế độ Tunnel Mode được sử dụng để bảo vệ dữ liệu giữa hai mạng không tin cậy thông qua một VPN trung gian. Trong chế độ này, toàn bộ gói tin IP sẽ được mã hóa và bảo vệ, bao gồm cả IP Header và payload, để đảm bảo tính toàn vẹn của dữ liệu. Tunnel Mode được sử dụng cho các kết nối site-to-site
+  -  <p align="center">
+          <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/f586371d-5951-4296-9b6a-d41e58ff4ba5" alt="">
+  </p>
+  <p align="center">
+          <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/fea35eb1-bdb4-4e01-9ae2-41bf0b2ba462" alt="">
+  </p>
+
+
+- 
+  
   
 
 
