@@ -1,4 +1,4 @@
-![image](https://github.com/Giaduoc0211/5G-Security/assets/71538455/35603557-d67e-4f33-ab4d-9563c67ec609)# Types of Internet Security Protocols
+# Types of Internet Security Protocols
 ## Summary
 - [Overview](#Overview)
 - [TLS protocol](#TLSPotocol)
