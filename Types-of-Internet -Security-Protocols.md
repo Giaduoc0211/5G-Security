@@ -1,11 +1,11 @@
 # Types of Internet Security Protocols
 ## Summary
 - [Overview](#Overview)
-- [TLS protocol](#1.TLS_Potocol)
+- [TLS protocol](#TLSPotocol)
 - [HTTPS protocol ](#HTTPSprotocol)
 ## Overview
 Trong thế giới ngày nay, chúng ta truyền dữ liệu với số lượng lớn và tính bảo mật của dữ liệu này là rất quan trọng, vì vậy bảo mật Internet cung cấp tính năng đó, tức là bảo vệ dữ liệu. Có nhiều loại giao thức khác nhau tồn tại như định tuyến, chuyển thư và giao thức liên lạc từ xa
-## 1.**TLS-Potocol**
+## 1. **TLS Potocol**
 Ở đây mình sẽ không đề cập tới SSL nữa vì TLS chính là cải thiện tốt hơn của SSL. Vậy TLS là gì, TLS - transport layer secure nó được sinh ra để đảm bảo 3 tính chất bảo mật sau: 
 - Data encryption
 - Authentication
@@ -161,7 +161,32 @@ Dưới đây là các bước hoạt động tổng quan của Ipsec:
 <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/4f6aad80-6bf6-4db6-961c-1820cca4ba9c" alt="">
 </p>
 
+## 4. MACsec
+- MACsec-  Media Access Control Security, là giao thức bảo mật hoạt động ở lớp liên kết dữ liệu (Lớp 2) của mô hình OSI. Nó được thiết kế để bảo mật dữ liệu được truyền qua mạng Ethernet. MACsec cung cấp bảo mật điểm-điểm trên các liên kết Ethernet giữa các nút được kết nối trực tiếp và thường được sử dụng trong mạng doanh nghiệp để bảo vệ dữ liệu khi truyền qua mạng cục bộ.
+- Các tính năng chính của MACsec:
+  - Mã hóa: Mã hóa các khung ở lớp liên kết dữ liệu để bảo vệ tính bảo mật của dữ liệu.
+  - Xác thực: Đảm bảo rằng các khung hình đến từ một nguồn đã biết và không bị giả mạo.
+  - Kiểm tra tính toàn vẹn: Bảo vệ khỏi thao tác dữ liệu trái phép.
+     Tính linh hoạt: Tương thích với hầu hết các công nghệ Ethernet.
+- Cách thức hoạt động của MACsec: MACsec mã hóa từng khung hình trên mạng bằng khóa bảo mật. Mã hóa này minh bạch đối với người dùng và đảm bảo rằng dữ liệu không thể bị chặn hoặc thay đổi mà không bị phát hiện giữa các thiết bị được kết nối bằng Ethernet.
 
+
+## CÂU HỎI ĐẶT RA
+### **1. Tại sao dùng HTTPS tức SSL rồi lại cần dùng tới IPsec làm gì?**
+Để trả lời cầu hỏi này thì chúng ta sẽ phân tích chi tiết dưới này:
+- VPN IPsec so với SSL VPN: Sự khác biệt là gì?
+    - Lớp mô hình OSI: IPsec lớp 3 còn SSL lớp 6 hoặc 4
+- Hoạt động:
+  - VPN IPsec thường yêu cầu cài đặt phần mềm VPN trên máy tính của tất cả người dùng sẽ sử dụng VPN. Người dùng phải đăng nhập và chạy phần mềm này để kết nối với mạng và truy cập các ứng dụng cũng như dữ liệu của họ.
+  - Ngược lại, tất cả các trình duyệt web đều hỗ trợ SSL (trong khi hầu hết các thiết bị không được cấu hình tự động để hỗ trợ IPsec VPN). Người dùng có thể kết nối với SSL VPN thông qua trình duyệt của họ thay vì thông qua ứng dụng phần mềm VPN chuyên dụng mà không cần nhóm CNTT hỗ trợ thêm. (Tuy nhiên, điều này có nghĩa là hoạt động Internet không có trình duyệt không được VPN bảo vệ.)
+  - Kiểm soát truy cập: Kiểm soát truy cập là một thuật ngữ bảo mật cho các chính sách hạn chế quyền truy cập của người dùng vào thông tin, công cụ và phần mềm. Kiểm soát truy cập được triển khai đúng cách đảm bảo rằng chỉ những người phù hợp mới có thể truy cập dữ liệu nội bộ nhạy cảm và các ứng dụng phần mềm để xem và chỉnh sửa dữ liệu đó. VPN thường được sử dụng để kiểm soát truy cập vì không ai ngoài VPN có thể xem dữ liệu trong VPN.
+    - Nhiều tổ chức lớn cần thiết lập các cấp độ kiểm soát truy cập khác nhau — ví dụ: để những người đóng góp cá nhân không có cùng cấp độ truy cập như các giám đốc điều hành. Với IPsec VPN, bất kỳ người dùng nào được kết nối với mạng đều là thành viên chính thức của mạng đó. Họ có thể xem tất cả dữ liệu có trong VPN. Do đó, các tổ chức sử dụng IPsec VPN cần thiết lập và định cấu hình nhiều VPN để cho phép các cấp độ truy cập khác nhau. Và một số người dùng có thể cần phải đăng nhập vào nhiều VPN để thực hiện công việc của mình.
+    - Ngược lại, SSL VPN dễ cấu hình hơn để kiểm soát truy cập cá nhân. Nhóm CNTT có thể cấp cho người dùng quyền truy cập trên cơ sở từng ứng dụng.
+
+### **2. Sự khác biệt giữa IPsec và MACsec**
+- Lớp hoạt động: IPsec hoạt động ở lớp mạng và bảo mật các gói IP. MACsec hoạt động ở lớp liên kết dữ liệu và bảo mật các khung Ethernet.
+- Phạm vi bảo vệ: IPsec được thiết kế để liên lạc hai đầu qua internet hoặc giữa các mạng khác nhau. MACsec bảo mật dữ liệu trên mạng cục bộ (LAN) và bị giới hạn trong giao tiếp điểm-điểm.
+- Triển khai: IPsec được triển khai trong phần mềm và có thể linh hoạt hơn, trong khi MACsec yêu cầu hỗ trợ phần cứng để mã hóa và giải mã các khung Ethernet.
 
 
   
