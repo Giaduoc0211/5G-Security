@@ -99,28 +99,71 @@ TLS bao gốm 2 giai đoạn:
 HTTPS là giao thức mở rộng của HTTP và kết hợp lớp bảo mật. Khi một trình duyệt truy cập một trang web qua HTTPS, nó sẽ thiết lập một kết nối bảo mật sử dụng SSL/TLS để mã hóa dữ liệu được truyền tải giữa trình duyệt và máy chủ web.
 ⇒ Vậy tức là việc bảo mật của HTTP giống với TLS ở phần 1 mà mình đã mô tả
 ## **3. IPSEC protocol**
-- IPsec- IP security là một giao thức được sử dụng để bảo mật dữ liệu khi truyền tải qua mạng internet đặc biệt là trong các kết nối VPN (Virtual Private Network).
-- Vậy VPN là gì?VPN - Virtual private network là một dịch vụ bảo mật Internet cho phép người dùng truy cập Internet như thể họ được kết nối với mạng riêng. VPN mã hóa
+- **IPsec- IP security** là một giao thức được sử dụng để bảo mật dữ liệu khi truyền tải qua mạng internet đặc biệt là trong các kết nối VPN (Virtual Private Network).
+- Vậy **VPN** là gì?VPN - Virtual private network là một dịch vụ bảo mật Internet cho phép người dùng truy cập Internet như thể họ được kết nối với mạng riêng. VPN mã hóa
   thông tin liên lạc trên Internet cũng như cung cấp mức độ ẩn danh cao.
 - IPsec hoạt động tại lớp 3 - lớp network của mô hình OSI. Mục đích của IPsec là:
-  - Cung cấp bảo mật bộ định tuyến khi gửi dữ liệu qua internet công cộng.
-  - Mã hóa dữ liệu ứng dụng.
-  - Xác thực dữ liệu nhanh chóng nếu dữ liệu bắt nguồn từ một người gửi đã biết.
-  - Bảo vệ dữ liệu mạng bằng cách thiết lập các mạch mã hóa, gọi là IPsec tunnel, mã hóa tất cả dữ liệu được gửi giữa hai điểm cuối.
-  - Các tổ chức sử dụng IPSec để bảo vệ chống lại các cuộc tấn công replay.
-  - Giao thức IPSec gán số thứ tự cho mỗi gói dữ liệu và thực hiện kiểm tra để phát hiện dấu hiệu của các gói trùng lặp
-- Các chế độ hoạt động của IPsec:Cả 2 chế độ này đều đảm bảo tính bảo mật toàn vẹn và replay tuy nhiên nó sẽ có mức độ bảo mật khác nhau và cách thức hoạt động khác nhau:
-  - Transport mode: Trong chế độ này, chỉ có dữ liệu người dùng được mã hóa và bảo vệ, IP Header không bị thay đổi hay mã hóa. Transport Mode được sử dụng cho các kết nối VPN client-to-site.
-  - Tunnel mode: Chế độ Tunnel Mode được sử dụng để bảo vệ dữ liệu giữa hai mạng không tin cậy thông qua một VPN trung gian. Trong chế độ này, toàn bộ gói tin IP sẽ được mã hóa và bảo vệ, bao gồm cả IP Header và payload, để đảm bảo tính toàn vẹn của dữ liệu. Tunnel Mode được sử dụng cho các kết nối site-to-site
+  - VPN (Virtual Private Network): Bảo vệ dữ liệu truyền qua các mạng không an toàn như Internet.
+  - Bảo mật truyền thông: Bảo vệ các gói tin trong các mạng nội bộ và giữa các chi nhánh.
+  - Remote Access: Cung cấp kết nối an toàn cho người dùng từ xa
+- **Các chế độ hoạt động của IPsec**: Cả 2 chế độ này đều đảm bảo tính bảo mật toàn vẹn và replay tuy nhiên nó sẽ có mức độ bảo mật khác nhau và cách thức hoạt động khác nhau:
+  - **Transport mode**: Trong chế độ này, chỉ có dữ liệu người dùng được mã hóa và bảo vệ, IP Header không bị thay đổi hay mã hóa. Transport Mode được sử dụng cho các kết nối VPN client-to-site.
+  - **Các thức hoạt động:**
+    - Mã hóa và xác thực: Trong chế độ vận chuyển, IPSec chỉ mã hóa và/hoặc xác thực phần tải dữ liệu (payload) của gói IP. Phần tiêu đề IP ban đầu không được mã hóa và vẫn còn nguyên vẹn.
+    - Cơ chế bảo vệ: Chế độ này đảm bảo tính bảo mật và tính toàn vẹn của dữ liệu trong các gói tin, nhưng không che giấu địa chỉ IP gốc của các thiết bị giao tiếp.
+  - **Ứng dụng**:
+    - Giao tiếp giữa các thiết bị: Thường được sử dụng để bảo vệ giao tiếp giữa các thiết bị cá nhân, máy chủ, hoặc giữa máy chủ và máy khách. Ví dụ: bảo vệ dữ liệu truyền giữa một máy tính cá nhân và một máy chủ trong cùng một mạng nội bộ hoặc qua Internet.
+    - Hiệu suất: Do chỉ mã hóa phần dữ liệu, chế độ vận chuyển có thể có hiệu suất tốt hơn so với chế độ đường hầm, nhất là khi không cần bảo mật toàn bộ gói IP.
+  - **Tunnel mode:** Trong chế độ Tunnel, toàn bộ gói tin sẽ được bảo vệ, gồm IP header và payload. IPSec gói gói dữ liệu bên trong một packet mới, mã hóa nó và thêm một IP header mới. Nó thường được ứng dụng trong thiết lập VPN site-to-site.
+    - **Hoạt động:**
+      - Mã hóa toàn bộ gói IP: Trong chế độ đường hầm, toàn bộ gói IP gốc được mã hóa và đóng gói (encapsulated) trong một gói IP mới. Phần tiêu đề IP mới được thêm vào, và toàn bộ gói tin ban đầu (bao gồm cả tiêu đề IP gốc) được bảo vệ bên trong.
+      - Bảo mật mạnh mẽ: Chế độ này cung cấp mức độ bảo mật cao hơn bằng cách che giấu toàn bộ thông tin trong gói tin ban đầu, bao gồm cả địa chỉ IP nguồn và đích.
+    - **Ứng dụng:**
+        - VPN (Virtual Private Network): Chế độ đường hầm chủ yếu được sử dụng để thiết lập các mạng riêng ảo (VPN) giữa các mạng LAN hoặc giữa các thiết bị đầu cuối và mạng LAN. Ví dụ: kết nối bảo mật giữa chi nhánh của một công ty và trụ sở chính qua Internet.
+        - Remote Access: Cho phép người dùng từ xa truy cập vào mạng nội bộ của công ty một cách an toàn.   
   -  <p align="center">
-          <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/f586371d-5951-4296-9b6a-d41e58ff4ba5" alt="">
+          <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/aa85afc5-07e1-421f-aeda-2dc8c1db07a5" alt="">
   </p>
   <p align="center">
           <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/fea35eb1-bdb4-4e01-9ae2-41bf0b2ba462" alt="">
   </p>
+- **Đi sâu hơn vào các thành phần của IPsec:**
+  - **Authentication Header (AH):** Là một phần của giao thức IPSec, được sử dụng để cung cấp xác thực và tính toàn vẹn dữ liệu. AH sử dụng thuật toán băm để tạo mã xác thực cho gói tin, đảm bảo rằng gói tin không bị sửa đổi trên đường truyền
+  - **Encapsulating Security Payload (ESP):** ESP đóng vai trò cung cấp tính toàn vẹn, xác thực và bảo mật cho dữ liệu được truyền trong mạng. Bằng cách sử dụng thuật toán để mã hóa dữ liệu trong gói tin, đảm bảo rằng thông tin chỉ được giải mã bởi duy nhất người nhận chính xác.
+  - **Internet Key Exchange (IKE):** IKE có vai trò thiết lập các SA(security Associations) giữa hai điểm cuối trong mạng. IKE sử dụng các giao thức mã hóa khác nhau để bảo vệ các thông tin định danh và bảo mật trong quá trình thiết lập kết nối IPSec.
+      - **Security Associations (SA):** Là các cơ chế định danh và xác thực cho các kết nối được bảo mật trong IPSec. SA bao gồm thông tin về cơ chế mã hóa, thuật toán xác thực, địa chỉ IP của người gửi và người nhận.
+<p align="center">
+<img src="" alt="">
+</p>
+<p align="center">
+      <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/c9e65ba1-8586-4f17-bc76-e83fcaa21f1e" alt="">
+</p>
+<p align="center">
+      <img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/e4826593-e467-4a8f-9a00-04d5256d6028" alt="">
+</p>
+
+### **3.1 Cách thức hoạt động của IPsec**
+
+Dưới đây là các bước hoạt động tổng quan của Ipsec: 
+- **Giai đoạn 1:** Nhận dạng lưu lượng quan tâm
+  - Sau khi một thiết bị mạng đã nhận được một packet, nó sẽ match với IPsec policy đã configured để mà xác định xem packet có cần được truyền qua một đường hầm IPsec hay không. Lưu lượng cần được truyền qua đường hầm IPsec sẽ được gọi là lưu lượng quan tâm.
+- **Giai đoạn 2:** Đàm phán Security Association (SA) & Key exchange
+  - SA xác định những yếu tố để truyền dữ liệu an toàn giữa 2 site. Nó bao gồm giao thức bảo mật, chế độ đóng gói dữ liệu, thuật toán mã hóa và xác thực và những key được sử dụng để truyền dữ liệu.
+  - Sau đó sử dụng giao thức Internet Key Exchange (IKE) để mà thiết lập IKE SA để xác thực danh tính và trao đổi thông tin chính, sau đó là thiết lập IPsec SA để truyền dữ liệu an toàn dựa trên IKE SA
+- **Giai đoạn 3:** Truyền dữ liệu
+  - Sau khi IPsec SA đã được thiết lập giữa 2 site, chúng có thể truyền dữ liệu qua đường hầm IPsec.
+  - Để đảm bảo được tính bảo mật khi truyền dữ liệu, Authentication Header (AH) hoặc Encapsulating Security Payload (ESP) được ứng dụng để mã hóa và xác thực dữ liệu. Cơ chế mã hóa bảo đảm tính bảo mật của dữ liệu và ngăn chặn dữ liệu bị chặn trong quá trình truyền.
+  - Cơ chế xác thực bảo đảm tính toàn vẹn và độ tin cậy của dữ liệu và ngăn dữ liệu bị làm giả hoặc giả mạo trong quá trình truyền. IPsec sender sẽ sử dụng thuật toán mã hóa và khóa mã hóa để mã hóa một IP packet, tức là nó sẽ đóng gói dữ liệu gốc.
+  - Tiếp đó, sender và receiver sử dụng cùng một thuật toán xác thực và khóa xác thực để xử lý những packet được mã hóa nhằm thu được giá trị kiểm tra tính toàn vẹn (integrity check value – ICV). Nếu như những ICV thu được ở cả hai đầu đều giống nhau, thì gói tin không bị làm giả trong quá trình truyền và receiver sẽ giải mã gói tin đó. Nếu như những ICV khác nhau, receiver sẽ loại bỏ gói tin.
+- **Giai đoạn 4:** Kết thúc
+  - Đây sẽ là bước cuối cùng và nó liên quan đến việc kết thúc kênh bảo mật IPSec. Việc chấm dứt xảy ra khi mà quá trình trao đổi dữ liệu hoàn tất hoặc phiên đã hết thời gian. Những khóa mật mã cũng sẽ bị loại bỏ.
+<p align="center">
+<img src="https://github.com/Giaduoc0211/5G-Security/assets/71538455/4f6aad80-6bf6-4db6-961c-1820cca4ba9c" alt="">
+</p>
 
 
-- 
+
+
   
   
 
