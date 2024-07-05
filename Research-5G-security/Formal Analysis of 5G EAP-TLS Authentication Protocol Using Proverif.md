@@ -98,8 +98,28 @@ và home network
 
 
 
+### B. Các sai sót trong thiết kế bảo mật
 
 
+![alt text](image/image-2.png)
+
+1. Lỗ  hổng đầu tiên là attacker đứng ở giữa UE và SEAF và nó sẽ giả mạo AUSF và gửi random R*-AUSF tới cho UE và UE xác thực cert-AUSF đúng và sử dụng R*-AUSF này để tạo khóa K-session
+![alt text](image.png)
 
 
-        
+2. Lỗ hổng thứ 2 là attacker sẽ giả mạo UE để connect tới AUSF
+
+![alt text](image-1.png)
+
+### C. Vá lỗ hổng
+
+- Ở đây họ vá lỗ hổng này bằng cách ký data gửi đi
+
+- Nhìn vào hình dưới đây có thể thấy bước số 2 AUSF sử dụng khóa K public của UE để mã hóa dữ liệu gửi đi và UE dùng private key để giải mã
+
+- Bước 3 UE sử dụng private key để mã hóa và AUSF sử dụng public key để giải mã. 
+![alt text](image-2.png)
+
+
+### D. Cách sửa của em
+![alt text](image-3.png)
